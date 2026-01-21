@@ -4,7 +4,7 @@ Secure System Development - Spring 2026 Labs
 
 ## Content
 
-- Lab 1: Static Application Security Testing
+- Lab 1: Infrastructure & SAST
 
 ## Instructions
 
