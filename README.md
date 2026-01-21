@@ -1,0 +1,52 @@
+# SSD-S26
+
+Secure System Development - Spring 2026 Labs
+
+## Content
+
+- Lab 1: Static Application Security Testing
+
+## Instructions
+
+1. Ensure you have docker and docker compose plugin installed
+
+   ```bash
+   docker -v
+   docker compose version
+   ```
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/InnoCyberSec/SSD-S26
+   ```
+
+1. Change into the project directory
+
+   ```bash
+   cd SSD-S26
+   ```
+
+1. [Before running any lab] Ensure you have the latest changes.
+
+   ```bash
+   git pull
+   docker compose pull
+   ```
+
+1. Update `docker-compose.yaml` to files for `labX`
+
+   ```yaml
+   services:
+      labenv:
+        volumes:
+         - ./labX:/app/workshop
+   ```
+
+1. Run the environment
+
+   ```bash
+   docker compose up -d
+   ```
+
+1. Access the lab at <http://localhost:3000>
