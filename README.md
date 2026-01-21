@@ -34,7 +34,7 @@ Secure System Development - Spring 2026 Labs
    docker compose pull
    ```
 
-1. Update `docker-compose.yaml` to files for `labX`
+1. Update `docker-compose.yaml` to serve files for `labX`
 
    ```yaml
    services:
