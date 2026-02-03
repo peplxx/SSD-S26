@@ -20,6 +20,7 @@ services:
       - USER_UID=1000
       - USER_GID=1000
       - GITEA__server__ROOT_URL=${GITEA__server__ROOT_URL}
+      - GITEA__server__DOMAIN=${GITEA__server__DOMAIN}
       - GITEA__server__HTTP_PORT=3000
     ports:
       - "3000:3000"
@@ -41,8 +42,6 @@ services:
       - DRONE_SERVER_HOST=${DRONE_SERVER_HOST}
       - DRONE_SERVER_PROTO=https
       - DRONE_USER_CREATE=username:${DRONE_ADMIN},admin:true
-    ports:
-      - "8080:80"
     volumes:
       - drone_data:/data
     restart: unless-stopped
