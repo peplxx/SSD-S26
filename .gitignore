@@ -3,3 +3,4 @@ solutions/
 .vscode/
 venv/
 *.img
+*.pdf
