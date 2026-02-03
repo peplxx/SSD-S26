@@ -1,0 +1,7 @@
+my-gitea.duckdns.org {
+  reverse_proxy gitea:3000
+}
+
+my-drone.duckdns.org {
+  reverse_proxy drone:80
+}
