@@ -5,6 +5,7 @@ Secure System Development - Spring 2026 Labs
 ## Content
 
 - Lab 1: Infrastructure & SAST
+- Lab 2: DAST & WAF
 
 ## Instructions
 
