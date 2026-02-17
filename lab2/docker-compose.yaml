@@ -1,0 +1,49 @@
+services:
+  tiwap:
+    image: sh3b0/tiwap:latest
+    container_name: vulnerable-app
+    networks:
+      - dast-network
+    restart: unless-stopped
+
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    container_name: zap-scanner
+    networks:
+      - dast-network
+    volumes:
+      - ./zap-reports:/zap/wrk:rw
+    entrypoint: ["tail", "-f", "/dev/null"]
+    depends_on:
+      - tiwap
+
+  hawkscan:
+    image: stackhawk/hawkscan:latest
+    container_name: hawkscan
+    networks:
+      - dast-network
+    environment:
+      - API_KEY=${HAWK_API_KEY}
+    volumes:
+      - ./stackhawk:/hawk:rw
+    depends_on:
+      - tiwap
+
+  waf:
+    container_name: waf
+    image: owasp/modsecurity-crs:nginx
+    environment:
+        - BACKEND=http://tiwap:5000
+    ports:
+        - "127.0.0.1:5002:8080"
+    volumes:
+      - ./modsecurity-override.conf:/etc/modsecurity.d/modsecurity-override.conf:rw
+    depends_on:
+      - tiwap
+    networks:
+       - dast-network
+
+
+networks:
+  dast-network:
+    driver: bridge

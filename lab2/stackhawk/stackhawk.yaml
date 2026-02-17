@@ -1,0 +1,36 @@
+app:
+  applicationId: 2720b9e5-ae66-476f-9653-311d902e1aef
+  host: http://tiwap:5000
+  env: Development
+  authentication:
+    usernamePassword:
+      credentials:
+      - username: admin
+        password: admin
+      scanUsername: admin
+      scanPassword: admin
+      type: FORM
+      loginPath: /login
+      loginPagePath: /
+      usernameField: username
+      passwordField: password
+    cookieAuthorization:
+      cookieNames:
+        - session
+    loggedInIndicator: "Signout"
+    loggedOutIndicator: "login"
+    testPath:
+      path: /dashboard
+      success: ".*200.*"        # Checks for 200 OK in response headers
+
+hawk:
+  spider:
+    base: true
+    maxDurationMinutes: 5
+    enabled: true
+  startupTimeoutMinutes: 5
+  scan:
+    concurrentRequests: '20'
+    throttlePassiveBacklog: '10000'
+    maxDurationMinutes: '10'
+  failureThreshold: high
