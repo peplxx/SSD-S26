@@ -1,0 +1,40 @@
+# https://github.com/lima-vm/lima/blob/master/templates/default.yaml
+
+vmType: "qemu"
+
+images:
+  - location: "./box.img" # Adjust (relative) path to box.img if needed
+    arch: x86_64
+
+cpus: 4
+memory: "4GiB"
+disk: "20GiB"
+
+containerd:
+  system: false
+  user: false
+
+mounts:
+  - location: "{{.Home}}/workshop" # Adjust (absolute) path to labX directory (with md files)
+    mountPoint: /app/workshop
+    writable: true
+
+provision:
+- mode: system
+  script: |
+    /app/workshop/provision.sh
+
+user:
+  name: ubuntu
+  uid: 1000
+  home: /home/ubuntu
+  shell: /usr/bin/fish
+
+hostResolver:
+  hosts:
+    host.docker.internal: host.lima.internal
+
+portForwards:
+  - guestPort: 3000
+  - guestPort: 8080
+  - guestPort: 5800
