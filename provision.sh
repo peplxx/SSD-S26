@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo "==> Update hosts file to resolve localhost.localdomain to 127.0.0.1"
+echo "==> Add entries to hosts file"
 echo "127.0.0.1  localhost.localdomain" >> /etc/hosts
+echo "127.0.0.1  lima-labenv" >> /etc/hosts
 
 echo "==> Download stable labenv from github releases..."
 wget -q https://github.com/sh3b0/interactive-labs/releases/download/boxes/labenv-stable.zip

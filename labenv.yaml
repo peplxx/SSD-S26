@@ -21,8 +21,7 @@ mounts:
 
 provision:
 - mode: system
-  script: |
-    /app/workshop/provision.sh
+  file: provision.sh
 
 user:
   name: ubuntu
@@ -38,3 +37,5 @@ portForwards:
   - guestPort: 3000
   - guestPort: 8080
   - guestPort: 5800
+  - guestPort: 9000
+  - guestPort: 5000

@@ -1,3 +1,5 @@
 workspace/
 solutions/
 .vscode/
+venv/
+*.img
