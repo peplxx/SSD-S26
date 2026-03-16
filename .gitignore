@@ -2,6 +2,7 @@ workspace/
 solutions/
 .vscode/
 venv/
+.venv/
 *.img
 *.pdf
 .DS_Store
