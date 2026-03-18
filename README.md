@@ -7,7 +7,8 @@ Secure System Development - Spring 2026 Labs
 - Lab 1: Infrastructure & SAST
 - Lab 2: DAST & WAF
 - Lab 3: Memory Safety
-- Lab 4: IAM
+- Lab 4: Identity and Access Management
+- Lab 5: Observability and Vulnerability Management
 
 ## Instructions
 
