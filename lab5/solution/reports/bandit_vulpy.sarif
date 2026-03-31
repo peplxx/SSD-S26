@@ -1,0 +1,2451 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Bandit",
+          "rules": [
+            {
+              "id": "B113",
+              "name": "request_without_timeout",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b113_request_without_timeout.html"
+            },
+            {
+              "id": "B108",
+              "name": "hardcoded_tmp_directory",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b108_hardcoded_tmp_directory.html"
+            },
+            {
+              "id": "B404",
+              "name": "blacklist",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/blacklists/blacklist_imports.html#b404-import-subprocess"
+            },
+            {
+              "id": "B603",
+              "name": "subprocess_without_shell_equals_true",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b603_subprocess_without_shell_equals_true.html"
+            },
+            {
+              "id": "B608",
+              "name": "hardcoded_sql_expressions",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b608_hardcoded_sql_expressions.html"
+            },
+            {
+              "id": "B110",
+              "name": "try_except_pass",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b110_try_except_pass.html"
+            },
+            {
+              "id": "B105",
+              "name": "hardcoded_password_string",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b105_hardcoded_password_string.html"
+            },
+            {
+              "id": "B201",
+              "name": "flask_debug_true",
+              "helpUri": "https://bandit.readthedocs.io/en/1.7.5/plugins/b201_flask_debug_true.html"
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2026-03-31T19:19:20Z"
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "_totals": {
+            "loc": 1556,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "SEVERITY.LOW": 9,
+            "CONFIDENCE.LOW": 6,
+            "SEVERITY.MEDIUM": 36,
+            "CONFIDENCE.MEDIUM": 39,
+            "SEVERITY.HIGH": 4,
+            "CONFIDENCE.HIGH": 4
+          },
+          "./vulpy/bad/api_list.py": {
+            "loc": 14,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 1,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/api_post.py": {
+            "loc": 23,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 3,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 2,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/brute.py": {
+            "loc": 19,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 2,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 2
+          },
+          "./vulpy/bad/db.py": {
+            "loc": 18,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/db_init.py": {
+            "loc": 32,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/libapi.py": {
+            "loc": 22,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 3,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 3,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/libmfa.py": {
+            "loc": 55,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/libposts.py": {
+            "loc": 18,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/libsession.py": {
+            "loc": 20,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 1
+          },
+          "./vulpy/bad/libuser.py": {
+            "loc": 38,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 3,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 3,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_api.py": {
+            "loc": 50,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_csp.py": {
+            "loc": 5,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_hello.py": {
+            "loc": 5,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_mfa.py": {
+            "loc": 42,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_posts.py": {
+            "loc": 23,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/mod_user.py": {
+            "loc": 51,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/vulpy-ssl.py": {
+            "loc": 19,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 2,
+            "SEVERITY.HIGH": 1,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 4,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/bad/vulpy.py": {
+            "loc": 41,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 1,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 2,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/cutpasswd.py": {
+            "loc": 13,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/db_init.py": {
+            "loc": 33,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/httpbrute.py": {
+            "loc": 19,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 1,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/libapi.py": {
+            "loc": 37,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/libmfa.py": {
+            "loc": 55,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/libposts.py": {
+            "loc": 18,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/libsession.py": {
+            "loc": 39,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 1
+          },
+          "./vulpy/good/libuser.py": {
+            "loc": 90,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_api.py": {
+            "loc": 47,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_csp.py": {
+            "loc": 5,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_hello.py": {
+            "loc": 5,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_mfa.py": {
+            "loc": 47,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_posts.py": {
+            "loc": 23,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_user.py": {
+            "loc": 58,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/mod_welcome1.py": {
+            "loc": 19,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/vulpy-ssl.py": {
+            "loc": 19,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 2,
+            "SEVERITY.HIGH": 1,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 4,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/good/vulpy.py": {
+            "loc": 40,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 1,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 1,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 2,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/aes-decrypt.py": {
+            "loc": 20,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/aes-encrypt.py": {
+            "loc": 21,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/ca-create.py": {
+            "loc": 43,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 3,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 3,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/ca-csr-create.py": {
+            "loc": 26,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 2,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 2,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/ca-csr-load.py": {
+            "loc": 27,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 4,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 4,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/crack-cvv.py": {
+            "loc": 15,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/crack-hash.py": {
+            "loc": 15,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/fernet-generate-key.py": {
+            "loc": 3,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/generate_bad_passwords.py": {
+            "loc": 29,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 1,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/hashfile.py": {
+            "loc": 14,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/hmac_generate.py": {
+            "loc": 13,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/httpbrute.py": {
+            "loc": 24,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 1,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/luncheck.py": {
+            "loc": 13,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/rsa-decrypt.py": {
+            "loc": 21,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/rsa-encrypt.py": {
+            "loc": 20,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/rsa-keygen.py": {
+            "loc": 23,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 2,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 2,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/rsa-sign.py": {
+            "loc": 27,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/rsa-verify.py": {
+            "loc": 31,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 1,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 1,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/scrypt-crack.py": {
+            "loc": 36,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/scrypt-generate.py": {
+            "loc": 23,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/scrypt-verify.py": {
+            "loc": 28,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          },
+          "./vulpy/utils/skey.py": {
+            "loc": 22,
+            "nosec": 0,
+            "skipped_tests": 0,
+            "SEVERITY.UNDEFINED": 0,
+            "SEVERITY.LOW": 0,
+            "SEVERITY.MEDIUM": 0,
+            "SEVERITY.HIGH": 0,
+            "CONFIDENCE.UNDEFINED": 0,
+            "CONFIDENCE.LOW": 0,
+            "CONFIDENCE.MEDIUM": 0,
+            "CONFIDENCE.HIGH": 0
+          }
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    r = requests.get('http://127.0.1.1:5000/api/post/{}'.format(username))\n"
+                  },
+                  "startLine": 10
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/api_list.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    r = requests.get('http://127.0.1.1:5000/api/post/{}'.format(username))\n    if r.status_code != 200:\n"
+                  },
+                  "endLine": 11,
+                  "startLine": 9
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "api_key_file = Path('/tmp/supersecret.txt')\n"
+                  },
+                  "startLine": 6
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/api_post.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napi_key_file = Path('/tmp/supersecret.txt')\n\n"
+                  },
+                  "endLine": 7,
+                  "startLine": 5
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        r = requests.post('http://127.0.1.1:5000/api/key', json={'username':username, 'password':password})\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/api_post.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n        r = requests.post('http://127.0.1.1:5000/api/key', json={'username':username, 'password':password})\n\n"
+                  },
+                  "endLine": 17,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    r = requests.post('http://127.0.1.1:5000/api/post', json={'text':message}, headers={'X-APIKEY': api_key})\n"
+                  },
+                  "startLine": 30
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/api_post.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    api_key = api_key_file.open().read()\n    r = requests.post('http://127.0.1.1:5000/api/post', json={'text':message}, headers={'X-APIKEY': api_key})\n    print(r.text)\n"
+                  },
+                  "endLine": 31,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Consider possible security implications associated with the subprocess module."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "import subprocess\n"
+                  },
+                  "startLine": 3
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/brute.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nimport subprocess\nimport sys\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B404",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "text": "subprocess call - check for execution of untrusted input."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    result = subprocess.run([program, username, password], stdout=subprocess.DEVNULL)\n"
+                  },
+                  "startLine": 21
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/brute.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "for password in passwords:\n    result = subprocess.run([program, username, password], stdout=subprocess.DEVNULL)\n    if result.returncode == 0:\n"
+                  },
+                  "endLine": 22,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B603",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        c.execute(\"INSERT INTO users (user, password, failures) VALUES ('%s', '%s', '%d')\" %(u, p, 0))\n"
+                  },
+                  "startLine": 19
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/db.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    for u,p in users:\n        c.execute(\"INSERT INTO users (user, password, failures) VALUES ('%s', '%s', '%d')\" %(u, p, 0))\n\n"
+                  },
+                  "endLine": 20,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        c.execute(\"INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')\" %(u, p, 0, 0, ''))\n"
+                  },
+                  "startLine": 20
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/db_init.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    for u,p in users:\n        c.execute(\"INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')\" %(u, p, 0, 0, ''))\n\n"
+                  },
+                  "endLine": 21,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    for f in Path('/tmp/').glob('vulpy.apikey.' + username + '.*'):\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libapi.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    for f in Path('/tmp/').glob('vulpy.apikey.' + username + '.*'):\n        print('removing', f)\n"
+                  },
+                  "endLine": 17,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    keyfile = '/tmp/vulpy.apikey.{}.{}'.format(username, key)\n"
+                  },
+                  "startLine": 20
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libapi.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    keyfile = '/tmp/vulpy.apikey.{}.{}'.format(username, key)\n\n"
+                  },
+                  "endLine": 21,
+                  "startLine": 19
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    for f in Path('/tmp/').glob('vulpy.apikey.*.' + key):\n"
+                  },
+                  "startLine": 33
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libapi.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    for f in Path('/tmp/').glob('vulpy.apikey.*.' + key):\n        return f.name.split('.')[2]\n"
+                  },
+                  "endLine": 34,
+                  "startLine": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Try, Except, Pass detected."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    except Exception:\n"
+                  },
+                  "startLine": 21
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libsession.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "                session = json.loads(base64.b64decode(cookie))\n    except Exception:\n        pass\n"
+                  },
+                  "endLine": 22,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B110",
+          "ruleIndex": 5
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    user = c.execute(\"SELECT * FROM users WHERE username = '{}' and password = '{}'\".format(username, password)).fetchone()\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libuser.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    user = c.execute(\"SELECT * FROM users WHERE username = '{}' and password = '{}'\".format(username, password)).fetchone()\n\n"
+                  },
+                  "endLine": 13,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    c.execute(\"INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')\" %(username, password, 0, 0, ''))\n"
+                  },
+                  "startLine": 25
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libuser.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    c.execute(\"INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')\" %(username, password, 0, 0, ''))\n\n"
+                  },
+                  "endLine": 26,
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    c.execute(\"UPDATE users SET password = '{}' WHERE username = '{}'\".format(password, username))\n"
+                  },
+                  "startLine": 53
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/libuser.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\n    c.execute(\"UPDATE users SET password = '{}' WHERE username = '{}'\".format(password, username))\n    conn.commit()\n"
+                  },
+                  "endLine": 54,
+                  "startLine": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Possible hardcoded password: 'aaaaaaa'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.config['SECRET_KEY'] = 'aaaaaaa'\n"
+                  },
+                  "startLine": 13
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "app = Flask('vulpy')\napp.config['SECRET_KEY'] = 'aaaaaaa'\n\n"
+                  },
+                  "endLine": 14,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B105",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH"
+          },
+          "ruleId": "B201",
+          "ruleIndex": 7
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Possible hardcoded password: 'aaaaaaa'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.config['SECRET_KEY'] = 'aaaaaaa'\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "app = Flask('vulpy')\napp.config['SECRET_KEY'] = 'aaaaaaa'\n\n"
+                  },
+                  "endLine": 17,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B105",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', port=5000, extra_files='csp.txt')\n"
+                  },
+                  "startLine": 55
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/bad/vulpy.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', port=5000, extra_files='csp.txt')\n"
+                  },
+                  "endLine": 55,
+                  "startLine": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH"
+          },
+          "ruleId": "B201",
+          "ruleIndex": 7
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/darkweb2017-top10000.txt') as f:\n"
+                  },
+                  "startLine": 3
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/cutpasswd.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open('/tmp/darkweb2017-top10000.txt') as f:\n    for password in f.readlines():\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    response = requests.post(URL, data = {'username': username, 'password': password})\n"
+                  },
+                  "startLine": 22
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/httpbrute.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "for password in passwords:\n    response = requests.post(URL, data = {'username': username, 'password': password})\n    if 'HOME' in response.text:\n"
+                  },
+                  "endLine": 23,
+                  "startLine": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Possible hardcoded password: 'MYSUPERSECRETKEY'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "secret = 'MYSUPERSECRETKEY'\n"
+                  },
+                  "startLine": 10
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/libapi.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nsecret = 'MYSUPERSECRETKEY'\nnot_after = 60 # 1 minute\n"
+                  },
+                  "endLine": 11,
+                  "startLine": 9
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B105",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "Try, Except, Pass detected."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    except Exception:\n"
+                  },
+                  "startLine": 22
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/libsession.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "        country = geo.country.iso_code\n    except Exception:\n        pass\n"
+                  },
+                  "endLine": 23,
+                  "startLine": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B110",
+          "ruleIndex": 5
+        },
+        {
+          "message": {
+            "text": "Possible SQL injection vector through string-based query construction."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    c.execute(\"INSERT INTO users (username, password, salt, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%s', '%d', '%d', '%s')\" %(username, '', '', 0, 0, ''))\n"
+                  },
+                  "startLine": 61
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/libuser.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    c = conn.cursor()\n    c.execute(\"INSERT INTO users (username, password, salt, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%s', '%d', '%d', '%s')\" %(username, '', '', 0, 0, ''))\n    conn.commit()\n"
+                  },
+                  "endLine": 62,
+                  "startLine": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B608",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Possible hardcoded password: 'aaaaaaa'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.config['SECRET_KEY'] = 'aaaaaaa'\n"
+                  },
+                  "startLine": 13
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "app = Flask('vulpy')\napp.config['SECRET_KEY'] = 'aaaaaaa'\n\n"
+                  },
+                  "endLine": 14,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B105",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH"
+          },
+          "ruleId": "B201",
+          "ruleIndex": 7
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy-ssl.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', ssl_context=('/tmp/acme.cert', '/tmp/acme.key'))\n"
+                  },
+                  "endLine": 29,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Possible hardcoded password: '123aa8a93bdde342c871564a62282af857bda14b3359fde95d0c5e4b321610c1'"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.config['SECRET_KEY'] = '123aa8a93bdde342c871564a62282af857bda14b3359fde95d0c5e4b321610c1'\n"
+                  },
+                  "startLine": 17
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "app = Flask('vulpy')\napp.config['SECRET_KEY'] = '123aa8a93bdde342c871564a62282af857bda14b3359fde95d0c5e4b321610c1'\n\n"
+                  },
+                  "endLine": 18,
+                  "startLine": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "LOW"
+          },
+          "ruleId": "B105",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.run(debug=True, host='127.0.1.1', port=5001, extra_files='csp.txt')\n"
+                  },
+                  "startLine": 53
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/good/vulpy.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\napp.run(debug=True, host='127.0.1.1', port=5001, extra_files='csp.txt')\n\n"
+                  },
+                  "endLine": 54,
+                  "startLine": 52
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "HIGH"
+          },
+          "ruleId": "B201",
+          "ruleIndex": 7
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/ca.key', 'wb') as out:\n"
+                  },
+                  "startLine": 31
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-create.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open('/tmp/ca.key', 'wb') as out:\n    out.write(pem_private)\n"
+                  },
+                  "endLine": 32,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/ca.pub', 'wb') as out:\n"
+                  },
+                  "startLine": 34
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-create.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open('/tmp/ca.pub', 'wb') as out:\n    out.write(pem_public)\n"
+                  },
+                  "endLine": 35,
+                  "startLine": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/ca.cert', 'wb') as out:\n"
+                  },
+                  "startLine": 58
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-create.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# Write our certificate out to disk.\nwith open('/tmp/ca.cert', 'wb') as out:\n    out.write(cert.public_bytes(serialization.Encoding.PEM))\n"
+                  },
+                  "endLine": 59,
+                  "startLine": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.key\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-create.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.key\", \"rb\") as key_file:\n    private_key = serialization.load_pem_private_key(\n"
+                  },
+                  "endLine": 13,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.csr\", \"wb\") as out:\n"
+                  },
+                  "startLine": 35
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-create.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# Write our CSR out to disk.\nwith open(\"/tmp/acme.csr\", \"wb\") as out:\n    out.write(csr.public_bytes(serialization.Encoding.PEM))\n"
+                  },
+                  "endLine": 36,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/ca.cert\", \"rb\") as ca_cert_file:\n"
+                  },
+                  "startLine": 13
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-load.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/ca.cert\", \"rb\") as ca_cert_file:\n    ca_cert = x509.load_pem_x509_certificate(ca_cert_file.read(), default_backend())\n"
+                  },
+                  "endLine": 14,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.csr\", \"rb\") as csr_file:\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-load.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.csr\", \"rb\") as csr_file:\n    csr = x509.load_pem_x509_csr(csr_file.read(), default_backend())\n"
+                  },
+                  "endLine": 17,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/ca.key\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 19
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-load.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/ca.key\", \"rb\") as key_file:\n    private_key = serialization.load_pem_private_key(\n"
+                  },
+                  "endLine": 20,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/acme.cert', 'wb') as out:\n"
+                  },
+                  "startLine": 35
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/ca-csr-load.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "# Write our certificate out to disk.\nwith open('/tmp/acme.cert', 'wb') as out:\n    out.write(cert.public_bytes(serialization.Encoding.PEM))\n"
+                  },
+                  "endLine": 36,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "    with requests.get(url, stream=True) as r:\n"
+                  },
+                  "startLine": 21
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/generate_bad_passwords.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    click.echo('Downloading password file...', nl=False, err=True)\n    with requests.get(url, stream=True) as r:\n        r.raise_for_status()\n"
+                  },
+                  "endLine": 22,
+                  "startLine": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Requests call without timeout"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        response = requests.post(url, data = {'username': username, 'password': password})\n"
+                  },
+                  "startLine": 25
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/httpbrute.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "    for password in passwords:\n        response = requests.post(url, data = {'username': username, 'password': password})\n        logging.info('{} {} {}'.format(username, password, response.status_code))\n"
+                  },
+                  "endLine": 26,
+                  "startLine": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B113",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.key\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 14
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-decrypt.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.key\", \"rb\") as key_file:\n    private_key = serialization.load_pem_private_key(\n"
+                  },
+                  "endLine": 15,
+                  "startLine": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.pub\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 14
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-encrypt.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.pub\", \"rb\") as key_file:\n    public_key = serialization.load_pem_public_key(\n"
+                  },
+                  "endLine": 15,
+                  "startLine": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/acme.key', 'wb') as out:\n"
+                  },
+                  "startLine": 26
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-keygen.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open('/tmp/acme.key', 'wb') as out:\n    out.write(pem_private)\n"
+                  },
+                  "endLine": 27,
+                  "startLine": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open('/tmp/acme.pub', 'wb') as out:\n"
+                  },
+                  "startLine": 29
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-keygen.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open('/tmp/acme.pub', 'wb') as out:\n    out.write(pem_public)\n"
+                  },
+                  "endLine": 30,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.key\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 15
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-sign.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.key\", \"rb\") as key_file:\n    private_key = serialization.load_pem_private_key(\n"
+                  },
+                  "endLine": 16,
+                  "startLine": 14
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "Probable insecure usage of temp file/directory."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "with open(\"/tmp/acme.pub\", \"rb\") as key_file:\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "vulpy/utils/rsa-verify.py"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\nwith open(\"/tmp/acme.pub\", \"rb\") as key_file:\n    public_key = serialization.load_pem_public_key(\n"
+                  },
+                  "endLine": 17,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "MEDIUM",
+            "issue_severity": "MEDIUM"
+          },
+          "ruleId": "B108",
+          "ruleIndex": 1
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.4.json"
+}

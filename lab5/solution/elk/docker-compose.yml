@@ -1,0 +1,142 @@
+###############################################################################
+# ELK Stack + Filebeat + Nginx (for log generation)
+#
+# Integrations:
+#   1. Nginx  – access/error logs shipped via Filebeat nginx module
+#   2. Docker – container metrics/logs shipped via Filebeat docker input
+#
+# Setup:
+#   1. First run:
+#        docker compose up setup
+#        docker compose up kibana-genkeys   # copy xpack.encryptedSavedObjects.encryptionKey into kibana/config/kibana.yml
+#   2. Then:
+#        docker compose up -d
+#   3. Open http://localhost:5601  (elastic / changeme)
+###############################################################################
+
+version: "3.8"
+
+services:
+
+  # --------------------------------------------------------------------------
+  # Elasticsearch
+  # --------------------------------------------------------------------------
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=lab5-elk
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=changeme
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=false   # plain HTTP for lab simplicity
+      - xpack.license.self_generated.type=basic
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - elk
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s -u elastic:changeme http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"\\|\"status\":\"yellow\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  # --------------------------------------------------------------------------
+  # Kibana
+  # --------------------------------------------------------------------------
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.2
+    container_name: kibana
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      - KIBANA_SYSTEM_PASSWORD=changeme
+    volumes:
+      - ./kibana/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:5601/api/status | grep -q '\"level\":\"available\"'"]
+      interval: 15s
+      timeout: 5s
+      retries: 12
+
+  # --------------------------------------------------------------------------
+  # Filebeat – ships Nginx logs + Docker logs to Elasticsearch
+  # --------------------------------------------------------------------------
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.12.2
+    container_name: filebeat
+    user: root                       # needed to read /var/lib/docker/containers
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+      kibana:
+        condition: service_healthy
+    volumes:
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./filebeat/modules.d:/usr/share/filebeat/modules.d:ro
+      - nginx_logs:/var/log/nginx:ro                             # integration 1: Nginx logs
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro # integration 2: Docker logs
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - elk
+    command: ["--strict.perms=false"]
+
+  # --------------------------------------------------------------------------
+  # Nginx – generates access/error log traffic for integration 1
+  # --------------------------------------------------------------------------
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-demo
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - nginx_logs:/var/log/nginx
+    networks:
+      - elk
+
+  # --------------------------------------------------------------------------
+  # Setup helper (one-off container to create users/roles)
+  # --------------------------------------------------------------------------
+  setup:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: elk-setup
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      - ELASTIC_PASSWORD=changeme
+      - KIBANA_SYSTEM_PASSWORD=changeme
+      - LOGSTASH_INTERNAL_PASSWORD=changeme
+    command: >
+      bash -c '
+        echo "Waiting for Elasticsearch...";
+        until curl -s -u elastic:changeme http://elasticsearch:9200/_cluster/health | grep -q "yellow\|green"; do sleep 2; done;
+        echo "Setting kibana_system password...";
+        curl -s -X POST -u elastic:changeme http://elasticsearch:9200/_security/user/kibana_system/_password -H "Content-Type: application/json" -d "{\"password\":\"changeme\"}";
+        echo "Setup done."
+      '
+    networks:
+      - elk
+
+networks:
+  elk:
+    driver: bridge
+
+volumes:
+  elasticsearch_data:
+  nginx_logs:

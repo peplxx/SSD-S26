@@ -1,0 +1,693 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "nodejsscan",
+          "rules": [
+            {
+              "id": "sequelize_tls",
+              "name": "SequelizeTls",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-319"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#sequelize_tls"
+            },
+            {
+              "id": "express_open_redirect",
+              "name": "ExpressOpenRedirect",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-601"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#express_open_redirect"
+            },
+            {
+              "id": "node_deserialize",
+              "name": "NodeDeserialize",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-502"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#node_deserialize"
+            },
+            {
+              "id": "node_xxe",
+              "name": "NodeXxe",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-611"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#node_xxe"
+            },
+            {
+              "id": "express_lfr_warning",
+              "name": "ExpressLfrWarning",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-23"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#express_lfr_warning"
+            },
+            {
+              "id": "cookie_session_default",
+              "name": "CookieSessionDefault",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-522"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_default"
+            },
+            {
+              "id": "cookie_session_no_domain",
+              "name": "CookieSessionNoDomain",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-522"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_no_domain"
+            },
+            {
+              "id": "cookie_session_no_maxage",
+              "name": "CookieSessionNoMaxage",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-613"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_no_maxage"
+            },
+            {
+              "id": "cookie_session_no_path",
+              "name": "CookieSessionNoPath",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-522"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_no_path"
+            },
+            {
+              "id": "cookie_session_no_samesite",
+              "name": "CookieSessionNoSamesite",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-1275"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_no_samesite"
+            },
+            {
+              "id": "cookie_session_no_secure",
+              "name": "CookieSessionNoSecure",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-614"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#cookie_session_no_secure"
+            },
+            {
+              "id": "ejs_ect_template",
+              "name": "EjsEctTemplate",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-79"
+                ]
+              },
+              "helpUri": "https://ajinabraham.github.io/nodejsscan/#ejs_ect_template"
+            }
+          ],
+          "version": "0.4.3",
+          "informationUri": "https://github.com/ajinabraham/njsscan",
+          "semanticVersion": "0.4.3"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2026-03-31T19:19:26Z"
+        }
+      ],
+      "results": [
+        {
+          "message": {
+            "text": "The Sequelize connection string indicates that database server does not use TLS. Non TLS connections are susceptible to man in the middle (MITM) attacks.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "module.exports = {\n  username: process.env.MYSQL_USER,\n  password: process.env.MYSQL_PASSWORD,\n  database: process.env.MYSQL_DATABASE,\n  host: process.env.MYSQL_HOST || 'mysql-db',\n  port: process.env.MYSQL_PORT || 3306,\n  dialect: 'mysql'\n}"
+                  },
+                  "endColumn": 2,
+                  "endLine": 8,
+                  "startColumn": 18,
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/config/db.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A6: Security Misconfiguration",
+            "cwe": "CWE-319: Cleartext Transmission of Sensitive Information"
+          },
+          "ruleId": "sequelize_tls",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Untrusted user input in redirect() can result in Open Redirect vulnerability. An http parameter may contain a URL value and could cause the web application to redirect the request to the specified URL. By modifying the URL value to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials. Because the server name in the modified link is identical to the original site, phishing attempts have a more trustworthy appearance. Whether this issue poses a vulnerability will be subject to the intended behavior of the application. For example, a search engine might intentionally provide redirects to arbitrary URLs."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\tres.redirect(req.query.url)"
+                  },
+                  "endColumn": 30,
+                  "endLine": 188,
+                  "startColumn": 3,
+                  "startLine": 188
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/core/appHandler.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"
+          },
+          "ruleId": "express_open_redirect",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "text": "User controlled data in 'unserialize()' or 'deserialize()' function can result in Object Injection or Remote Code Injection."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\tvar products = serialize.unserialize(req.files.products.data.toString('utf8'))"
+                  },
+                  "endColumn": 81,
+                  "endLine": 218,
+                  "startColumn": 18,
+                  "startLine": 218
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/core/appHandler.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A8: Insecure Deserialization",
+            "cwe": "CWE-502: Deserialization of Untrusted Data"
+          },
+          "ruleId": "node_deserialize",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "text": "User controlled data in XML parsers can result in XML External or Internal Entity (XXE) Processing vulnerabilities"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\tvar products = libxmljs.parseXmlString(req.files.products.data.toString('utf8'), {noent:true,noblanks:true})"
+                  },
+                  "endColumn": 111,
+                  "endLine": 235,
+                  "startColumn": 18,
+                  "startLine": 235
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/core/appHandler.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A4: XML External Entities (XXE)",
+            "cwe": "CWE-611: Improper Restriction of XML External Entity Reference"
+          },
+          "ruleId": "node_xxe",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "text": "Untrusted user input in express render() function can result in arbitrary file read if hbs templating is used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        res.render('app/bulkproducts',{legacy:req.query.legacy})"
+                  },
+                  "endColumn": 65,
+                  "endLine": 23,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/routes/app.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A5: Broken Access Control",
+            "cwe": "CWE-23: Relative Path Traversal"
+          },
+          "ruleId": "express_lfr_warning",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Untrusted user input in express render() function can result in arbitrary file read if hbs templating is used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "        res.render('app/admin', {\n            admin: (req.user.role == 'admin')\n        })"
+                  },
+                  "endColumn": 11,
+                  "endLine": 39,
+                  "startColumn": 9,
+                  "startLine": 37
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/routes/app.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A5: Broken Access Control",
+            "cwe": "CWE-23: Relative Path Traversal"
+          },
+          "ruleId": "express_lfr_warning",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "text": "Consider changing the default session cookie name. An attacker can use it to fingerprint the server and target attacks accordingly."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "CWE-522: Insufficiently Protected Credentials"
+          },
+          "ruleId": "cookie_session_default",
+          "ruleIndex": 5
+        },
+        {
+          "message": {
+            "text": "Default session middleware settings: `domain` not set. It indicates the domain of the cookie; use it to compare against the domain of the server in which the URL is being requested. If they match, then check the path attribute next."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "CWE-522: Insufficiently Protected Credentials"
+          },
+          "ruleId": "cookie_session_no_domain",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "text": "Session middleware settings: `maxAge` not set. Use it to set expiration date for cookies."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "CWE-613: Insufficient Session Expiration"
+          },
+          "ruleId": "cookie_session_no_maxage",
+          "ruleIndex": 7
+        },
+        {
+          "message": {
+            "text": "Default session middleware settings: `path` not set. It indicates the path of the cookie; use it to compare against the request path. If this and domain match, then send the cookie in the request."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "CWE-522: Insufficiently Protected Credentials"
+          },
+          "ruleId": "cookie_session_no_path",
+          "ruleIndex": 8
+        },
+        {
+          "message": {
+            "text": "Default session middleware settings: `sameSite` attribute is not configured to strict or lax. These configurations provides protection against Cross Site Request Forgery attacks."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "cwe-1275"
+          },
+          "ruleId": "cookie_session_no_samesite",
+          "ruleIndex": 9
+        },
+        {
+          "message": {
+            "text": "Default session middleware settings: `secure` not set. It ensures the browser only sends the cookie over HTTPS."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "app.use(session({\n  secret: 'keyboard cat',\n  resave: true,\n  saveUninitialized: true,\n  cookie: { secure: false }\n}))"
+                  },
+                  "endColumn": 3,
+                  "endLine": 28,
+                  "startColumn": 9,
+                  "startLine": 23
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/server.js"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A2: Broken Authentication",
+            "cwe": "cwe-614"
+          },
+          "ruleId": "cookie_session_no_secure",
+          "ruleIndex": 10
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.products[i].code %>"
+                  },
+                  "endColumn": 1937,
+                  "endLine": 51,
+                  "startColumn": 1907,
+                  "startLine": 51
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.products[i].description %>"
+                  },
+                  "endColumn": 2056,
+                  "endLine": 53,
+                  "startColumn": 2019,
+                  "startLine": 53
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.products[i].id %>"
+                  },
+                  "endColumn": 1825,
+                  "endLine": 49,
+                  "startColumn": 1797,
+                  "startLine": 49
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.products[i].name %>"
+                  },
+                  "endColumn": 1881,
+                  "endLine": 50,
+                  "startColumn": 1851,
+                  "startLine": 50
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.products[i].tags %>"
+                  },
+                  "endColumn": 1993,
+                  "endLine": 52,
+                  "startColumn": 1963,
+                  "startLine": 52
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        },
+        {
+          "message": {
+            "text": "The EJS/ECT template has an unescaped variable. Untrusted user input passed to this variable results in Cross Site Scripting (XSS)."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "<%- output.searchTerm %>"
+                  },
+                  "endColumn": 745,
+                  "endLine": 20,
+                  "startColumn": 721,
+                  "startLine": 20
+                },
+                "artifactLocation": {
+                  "uri": "file:///src/views/app/products.ejs"
+                }
+              }
+            }
+          ],
+          "properties": {
+            "owasp-web": "A1: Injection",
+            "cwe": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          },
+          "ruleId": "ejs_ect_template",
+          "ruleIndex": 11
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json"
+}

@@ -1,0 +1,82 @@
+###############################################################################
+# Filebeat configuration
+# Integration 1: Nginx – access/error logs read directly from the shared volume
+# Integration 2: Docker – container logs via autodiscover + Docker socket
+###############################################################################
+
+# ---------------------------------------------------------------------------
+# Integration 1 – Nginx access and error logs
+# ---------------------------------------------------------------------------
+filebeat.inputs:
+  - type: log
+    id: nginx-access
+    enabled: true
+    paths:
+      - /var/log/nginx/access.log*
+    fields:
+      event.module: nginx
+      event.dataset: nginx.access
+    fields_under_root: true
+    tags: ["nginx", "access"]
+
+  - type: log
+    id: nginx-error
+    enabled: true
+    paths:
+      - /var/log/nginx/error.log*
+    fields:
+      event.module: nginx
+      event.dataset: nginx.error
+    fields_under_root: true
+    tags: ["nginx", "error"]
+
+# ---------------------------------------------------------------------------
+# Integration 2 – Docker container logs via autodiscover
+# ---------------------------------------------------------------------------
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      templates:
+        - config:
+            - type: container
+              paths:
+                - /var/lib/docker/containers/${data.docker.container.id}/*.log
+              fields:
+                event.module: docker
+              fields_under_root: true
+              tags: ["docker"]
+              processors:
+                - add_docker_metadata:
+                    host: "unix:///var/run/docker.sock"
+
+# ---------------------------------------------------------------------------
+# Processors
+# ---------------------------------------------------------------------------
+processors:
+  - add_host_metadata: ~
+
+# ---------------------------------------------------------------------------
+# Output – single filebeat-* index, no ILM / data-stream complexity
+# ---------------------------------------------------------------------------
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "changeme"
+  index: "filebeat-%{+yyyy.MM.dd}"
+
+# Disable ILM and data streams so the plain index name is respected
+setup.ilm.enabled: false
+setup.template.name: "filebeat"
+setup.template.pattern: "filebeat-*"
+setup.template.settings:
+  index.number_of_shards: 1
+
+setup.kibana:
+  host: "http://kibana:5601"
+  username: "elastic"
+  password: "changeme"
+
+setup.dashboards.enabled: false
+
+logging.level: info
+logging.to_stderr: true

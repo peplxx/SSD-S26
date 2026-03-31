@@ -1,0 +1,9 @@
+# Filebeat Nginx module – Integration 1
+# Collects and parses Nginx access and error logs.
+- module: nginx
+  access:
+    enabled: true
+    var.paths: ["/var/log/nginx/access.log*"]
+  error:
+    enabled: true
+    var.paths: ["/var/log/nginx/error.log*"]
